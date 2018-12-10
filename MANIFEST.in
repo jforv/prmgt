@@ -1,0 +1,18 @@
+include MANIFEST.in
+include requirements.txt
+include *.json
+include *.md
+include *.py
+include *.txt
+recursive-include lifestyle *.css
+recursive-include lifestyle *.csv
+recursive-include lifestyle *.html
+recursive-include lifestyle *.ico
+recursive-include lifestyle *.js
+recursive-include lifestyle *.json
+recursive-include lifestyle *.md
+recursive-include lifestyle *.png
+recursive-include lifestyle *.py
+recursive-include lifestyle *.svg
+recursive-include lifestyle *.txt
+recursive-exclude lifestyle *.pyc
