@@ -23,7 +23,7 @@ class UnitUser(Document):
 			if not frappe.db.exists ("User", self.email):
 				user = frappe.get_doc({
 					"doctype": "User",
-					"first_name": self.patient_name,
+					"first_name": self.full_name,
 					"email": self.email,
 					"user_type": "Website User"
 				})
@@ -54,7 +54,7 @@ def create_user(doc):
 	if not (doc.email and name[0]):
 		frappe.msgprint(_("Please set email and name"), alert=True)
 	user = frappe.get_doc({"doctype": "User",
-	"username": name[0]+name[-1].title(),
+	# "username": name[0]+name[-1].title(),
 	"first_name": name[0],
 	"last_name": name[-1],
 	"email": doc.email,
